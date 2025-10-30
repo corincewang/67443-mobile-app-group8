@@ -23,7 +23,9 @@ struct ContentView: View {
                 ProfileView()
                     .tag(TabItem.profile)
             }
+            #if os(iOS)
             .tabViewStyle(.page(indexDisplayMode: .never))
+            #endif
             
             // Bottom navigation bar
             BottomBarView(selectedTab: $selectedTab)

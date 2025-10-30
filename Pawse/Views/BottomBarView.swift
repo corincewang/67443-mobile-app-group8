@@ -37,8 +37,15 @@ struct BottomBarView: View {
         .padding(.top, 38)
         .frame(height: 115)
         .background(
-            Color(hex: "F6DDB2")
-                .cornerRadius(60, corners: [.bottomLeft, .bottomRight])
+            UnevenRoundedRectangle(
+                cornerRadii: .init(
+                    topLeading: 0,
+                    bottomLeading: 60,
+                    bottomTrailing: 60,
+                    topTrailing: 0
+                )
+            )
+            .fill(Color(hex: "F6DDB2"))
         )
     }
 }
@@ -102,27 +109,6 @@ extension Color {
             blue:  Double(b) / 255,
             opacity: Double(a) / 255
         )
-    }
-}
-
-// MARK: - View Extension (for specific corner radius)
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape(RoundedCorner(radius: radius, corners: corners))
-    }
-}
-
-struct RoundedCorner: Shape {
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-    
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(
-            roundedRect: rect,
-            byRoundingCorners: corners,
-            cornerRadii: CGSize(width: radius, height: radius)
-        )
-        return Path(path.cgPath)
     }
 }
 
