@@ -92,8 +92,6 @@ iOSInjectionProject/
 
 # Swift Package Manager build artifacts
 .swiftpm/
-*.xcodeproj/
-*.xcworkspace/
 
 # Build products
 *.abi.json
