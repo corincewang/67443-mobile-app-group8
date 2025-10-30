@@ -40,7 +40,7 @@ playground.xcworkspace
 Packages/
 Package.pins
 Package.resolved
-*.xcodeproj
+
 # Uncomment the next line if you'd like to ignore the Pods directory
 # Note: CocoaPods users should leave this commented
 .build/
