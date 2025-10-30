@@ -1,17 +1,21 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## User settings
+# Xcode Version-Specific Settings (User & Build Specific)
 xcuserdata/
-
-## Compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## Compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+*.xcuserstate
 build/
 DerivedData/
+
+# Xcode Project Files - INCLUDE THESE!
+# *.xcodeproj - DON'T ignore project files!
+# *.xcworkspace - DON'T ignore workspace files!
+
+# But DO ignore user-specific project data
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Xcode Version Compatibility
+*.xcscmblueprint
+*.xccheckout
 *.moved-aside
 *.pbxuser
 !default.pbxuser
@@ -21,82 +25,49 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-
-## Obj-C/Swift specific
 *.hmap
 
-## App packaging
+# Build Products
 *.ipa
 *.dSYM.zip
 *.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+*.abi.json
+*.swiftdoc
+*.swiftmodule
+*.swiftsourceinfo
 
 # Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 Packages/
 Package.pins
 Package.resolved
-
-# Uncomment the next line if you'd like to ignore the Pods directory
-# Note: CocoaPods users should leave this commented
+.swiftpm/
 .build/
 
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
 # CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
 Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
 
 # Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
 Carthage/Build/
 
-# Accio dependency management
+# Accio
 Dependencies/
 .accio/
 
 # fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
 iOSInjectionProject/
 
-# Firebase
-# GoogleService-Info.plist - Keep this for team collaboration
-
-# macOS
+# System Files
 .DS_Store
-
-# Swift Package Manager build artifacts
-.swiftpm/
-
-# Build products
-*.abi.json
-*.swiftdoc
-*.swiftmodule
-*.swiftsourceinfo
 
 # IDEs
 .vscode/
@@ -105,4 +76,6 @@ iOSInjectionProject/
 # Environment
 .env
 .env.local
+
+# Firebase - Keep GoogleService-Info.plist for team collaboration
 
